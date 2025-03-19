@@ -1,0 +1,1334 @@
+/* ===================================
+    01. Google font
+====================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  --primary-font: "Plus Jakarta Sans", sans-serif;
+  --secondary-font: "Manrope", sans-serif;;
+}
+/* ===================================
+    02. Color Variable
+====================================== */
+:root {
+  --base-color: #020407;
+  --title-color:#010205;
+  --manatee-color:#878C91;
+  --white-color:#fff;
+  --dark-color:#000;
+  --dark-gray-color:#5C5D5F;
+  --light-green-color:#99CF63;
+  --bright-green-color:#99EA48;
+  --white-smoke-color:#FAFAFA;
+  --medium-gray-color:#9B9B9C;
+  --light-gray:#F0F0F0;
+  --silver-gray:#D9D9D9;
+  --dark-gray:#666769;
+  --blue:#45A7DE;
+  --orange:#EA5F38;
+  --purple:#6A26F1;
+}
+/* ===================================
+    03. Typography
+====================================== */
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+body {
+  font-family: var(--primary-font);
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  word-break: break-word;
+  -webkit-font-smoothing: antialiased;
+  color: var(--base-color);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+section{
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+iframe {
+  border: none;
+  width: 100%;
+}
+button:focus,
+a:focus,
+a:active,
+input,
+input:hover,
+input:focus,
+input:active,
+textarea,
+textarea:hover,
+textarea:focus,
+textarea:active {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+img:not([draggable]),
+embed,
+object,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+a {
+  color: var(--base-color);
+  text-decoration: none;
+  outline: 0;
+  transition: all ease 0.4s;
+}
+a:active, a:focus, a:hover, a:visited {
+  text-decoration: none;
+  outline: 0;
+}
+
+button {
+  transition: all ease 0.4s;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+}
+
+ins {
+  text-decoration: none;
+}
+/* ===================================
+    04. Creative Utilities
+====================================== */
+/*------------------- 4.1. Creative Preloader -------------------*/
+.cs-preloader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: var(--base-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cs-preloader-inner {
+  display: block;
+  width: 45px;
+  height: 45px;
+}
+.cs-preloader-inner span {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  margin: 4px;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  animation: preloader 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--bright-green-color) transparent transparent transparent;
+}
+.cs-preloader-inner span:nth-child(1) {
+  animation-delay: -0.1s;
+}
+.cs-preloader-inner span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.cs-preloader-inner span:nth-child(3) {
+  animation-delay: -0.3s;
+}
+@keyframes preloader{
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*------------------- 4.2. Creative Buttons  -------------------*/
+.cs-btn-group{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.cs-btn-group .cs-btn-outline{
+  padding: 13px 16px;
+  display: inline-block;
+  background-color: transparent;
+  color: var(--base-color);
+  border: 1px solid var(--base-color);
+  border-radius: 50px;
+  line-height: 22px;
+  font-weight: bold;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: -.32px;
+}
+.cs-btn-group .cs-btn-outline:hover,
+.cs-btn-group .cs-btn-outline:active,
+.cs-btn-group .cs-btn-outline:focus{
+  background-color: var(--bright-green-color);
+  border-color: var(--bright-green-color);
+}
+.cs-btn-group .cs-round-btn{
+  border: none;
+  background: var(--base-color);
+  color: var(--white-color);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+.cs-btn-group .cs-round-btn:hover,
+.cs-btn-group .cs-round-btn:active,
+.cs-btn-group .cs-round-btn:focus{
+  background-color: var(--bright-green-color);
+  color: var(--base-color);;
+}
+.cs-btn-group .cs-btn-fill{
+  padding: 16px 32px;
+  display: inline-block;
+  background-color: #293a68;
+  color: var(--white-color);
+  border: 1px solid #293a68;
+  border-radius: 50px;
+  line-height: 22px;
+  font-weight: bold;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: -.32px;
+}
+.cs-btn-group .cs-btn-fill i{
+  margin-left: 30px;
+}
+.cs-btn-group .cs-btn-fill:hover,
+.cs-btn-group .cs-btn-fill:active,
+.cs-btn-group .cs-btn-fill:focus{
+  background-color: var(--bright-green-color);
+  border-color: var(--bright-green-color);
+  color: var(--base-color);
+}
+.cs-btn-group .cs-btn-underline{
+  padding: 0px;
+  display: inline-block;
+  background-color: transparent;
+  color: var(--base-color);
+  border-bottom: 1px solid var(--base-color);
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: -.32px;
+}
+.cs-btn-group .cs-btn-underline:hover,
+.cs-btn-group .cs-btn-underline:active,
+.cs-btn-group .cs-btn-underline:focus{
+  border-color: var(--bright-green-color);
+  color: var(--bright-green-color);
+}
+.cs-btn-group .cs-btn-play{
+  position: absolute;
+  right: -39px;
+  bottom: -5px;
+  height: 163px;
+  width: 163px;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  background-color: var(--bright-green-color);
+  color: var(--dark-color);
+  display: inline-block;
+  padding: 0;
+  font-size: 44px;
+}
+/*------------------- 4.3. Creative Titles  -------------------*/
+.cs-title-area .cs-sec-title{
+  font-size: 3rem;
+  line-height: 3.875rem;
+  font-weight: 600;
+  letter-spacing: -0.48px;
+  margin-bottom: 0px;
+  color: var(--title-color);
+}
+.cs-sec-text{
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--manatee-color);
+  margin-bottom: 0px;
+}
+/**** IPAD PRO Media Query ****/
+@media only screen and (max-width: 1366px) {
+  .cs-title-area .cs-sec-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 20px;
+  }
+}
+/**** IPHONE Media Query ****/
+@media only screen and (max-width: 600px) {
+  .cs-title-area .cs-sec-title {
+    font-size: 2rem !important;
+    line-height: 2.5rem !important;
+  }
+}
+/*------------------- 4.4. Creative Header  -------------------*/
+.cs-navbar{
+  padding: 0px;
+  background-color: #293a68;
+}
+.cs-header-logo{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.cs-main-menu ul {
+  display: flex;
+  align-items: center;
+  margin: 0 -20px !important;
+}
+.cs-main-menu ul li:first-child {
+  margin-left: 0 !important;
+}
+.cs-main-menu ul li {
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+}
+.cs-main-menu ul li a {
+  padding: 45px 25px;
+}
+.cs-main-menu ul li a {
+  display: block;
+  position: relative;
+  font-weight: bold;
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  color: #e4d7b2;
+  letter-spacing: -0.32px;
+  line-height: normal;
+}
+.cs-hero-content .cs-btn-group{
+  column-gap: 30px;
+  margin-bottom: 32px;
+}
+/**** IPAD Media Query ****/
+@media only screen and (max-width: 991px) {
+  .cs-header {
+    padding-bottom: 10px;
+  }
+}
+
+/**** Mobile Header ****/
+.cs-navbar-right {
+  gap: 15px;
+}
+.cs-canvas-btn {
+  background: transparent;
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 54px;
+  padding: 0;
+  margin-top: 7px;
+}
+.cs-canvas-btn .cs-line {
+  display: block;
+  height: 2px;
+  width: 18px;
+  background: var(--white-color);
+  margin: auto;
+  transition: 0.4s;
+}
+.cs-canvas-btn .cs-line:not(:last-child) {
+  margin-bottom: 4px;
+}
+.cs-canvas-btn:hover .cs-line:nth-child(2) {
+  width: 10px;
+}
+/**** Offcanvas Menu ****/
+.cs-mobile-logo{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.offcanvas .cs-offcanvas-btn{
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border: 2px solid var(--base-color);
+  border-radius: 50%;
+  line-height: 48px;
+  padding: 0;
+  color: var(--base-color);
+  opacity: 1;
+  margin-right: 0;
+}
+.cs-mobile-menu{
+  overflow-y: scroll;
+  max-height: calc(100vh - 200px);
+  padding-bottom: 25px;
+  margin-bottom: 40px;
+  text-align: left;
+  border-bottom: 2px solid var(--base-color);
+}
+.cs-mobile-menu ul {
+  margin: 0;
+  padding: 5px 0;
+}
+.cs-mobile-menu ul li {
+  list-style: none;
+}
+.cs-mobile-menu ul li a {
+  display: block;
+  position: relative;
+  font-weight: bold;
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  color: var(--base-color);
+  letter-spacing: -0.32px;
+  line-height: normal;
+  padding: 8px 0;
+}
+.cs-offcanvas-body .cs-offcanvas-address {
+  margin-bottom: 23px;
+}
+.cs-offcanvas-body .cs-offcanvas-address h6{
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--base-color);
+  margin-bottom: 0;
+  line-height: 28px;
+}
+.cs-offcanvas-body .cs-offcanvas-social {
+  display: flex;
+  gap: 20px;
+}
+.cs-offcanvas-body .cs-offcanvas-social a {
+  font-size: 20px;
+}
+/*------------------- 4.6. Creative Hero Section  -------------------*/
+.cs-hero-content .cs-hero-title{
+  color: var(--base-color);
+  font-size: 4.5rem;
+  line-height: 5.8rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: -0.48px;
+  margin-bottom: 32px;
+}
+.cs-hero-content .cs-hero-desc{
+  color: var(--manatee-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  font-style: normal;
+  letter-spacing: 0;
+  margin-bottom: 32px;
+}
+.cs-hero-content h5{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+  color: var(--base-color);
+  font-style: normal;
+  letter-spacing: 0;
+  margin-bottom: 0px;
+}
+.cs-hero-card .card-body{
+  background-color: var(--light-gray);
+  border-radius: 20px;
+  padding: 30px 25px;
+}
+.cs-hero-card .card-body .card-title{
+  font-size: 4.5rem;
+  line-height: 5rem;
+  color: var(--base-color);
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: -0.48px;
+  margin-bottom: 30px;
+}
+.cs-hero-card .card-body .card-text{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  font-style: normal;
+  color: var(--dark-gray-color);
+}
+.cs-hero-card .progress{
+  background-color: var(--silver-gray);
+}
+.cs-hero-card .progress .progress-bar{
+  background-color: var(--base-color);
+}
+.cs-card-ful{
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 45px 40px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden
+}
+.cs-card-ful .cs-card-content{
+  max-width: 55%;
+}
+.cs-card-content .cs-card-subheading {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.cs-card-content .cs-card-subheading span{
+  display: inline-block;
+  width: 54px;
+  height: 1px;
+  background: var(--bs-body-bg);
+}
+.cs-card-content .cs-card-subheading p{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  font-style: normal;
+  color: var(--white-color);
+  margin-bottom: 0px;
+  margin-left: 10px;
+  letter-spacing: -0.48px;
+}
+.cs-card-ful .cs-card-content h3{
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 2.625rem;
+  font-style: normal;
+  color: var(--white-color);
+  margin-bottom: 10px;
+}
+/**** IPAD PRO Media Query ****/
+@media only screen and (max-width: 1366px) {
+  .cs-hero-content .cs-hero-title{
+    font-size: 2.6rem;
+    line-height: normal;
+  }
+  .cs-hero-clients img{
+    max-width: 80px;
+  }
+  .cs-hero-card .card-body{
+    padding: 15px 10px;
+  }
+  .cs-hero-card .card-body .card-title{
+    font-size: 2.25rem;
+    line-height: 2.275rem;
+    margin-bottom: 15px;
+  }
+  .cs-hero-card .card-body .card-text{
+    margin-bottom: 35px;
+  }
+  .cs-card-ful .cs-card-content {
+    max-width: 70%;
+  }
+  .cs-card-ful{
+    padding: 45px 15px;
+  }
+}
+/**** IPAD Media Query ****/
+@media only screen and (max-width: 991px) {
+  .cs-hero-clients {
+    column-gap: .5rem;
+    margin-bottom: 1.5rem;
+  }
+  .cs-hero-clients img {
+    max-width: 100%;
+  }
+}
+
+/**** IPHONE Media Query ****/
+@media only screen and (max-width: 600px) {
+  .cs-hero-content .cs-hero-title{
+    font-size: 2.2rem;
+  }
+  .cs-hero-content{
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .cs-btn-group{
+    align-items: start;
+  }
+
+  .cs-btn-underline{
+    margin-top: 15px;
+  }
+
+  .cs-hero-content .cs-btn-group a:first-child{
+    margin-bottom: 15px;
+  }
+  .cs-hero-clients {
+    column-gap: .5rem;
+  }
+  .cs-hero-clients img {
+    max-width: 85px;
+  }
+  .cs-hero-content h5{
+    margin-bottom: 10px;
+  }
+  .cs-card-ful {
+    padding: 20px 15px;
+  }
+  .cs-card-ful .cs-card-content {
+    max-width: 100%;
+  }
+  .cs-card-ful .cs-card-content h3{
+    font-size: 2.8rem;
+    line-height: 2.425rem;
+  }
+}
+/*------------------- 4.7. Creative About Section  -------------------*/
+.cs-about-card{
+  background-color:var(--base-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+}
+.cs-about-card .card-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+.cs-about-card .card-body .card-title{
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--white-color);
+  letter-spacing: -0.48px;
+  margin-bottom: 0;
+}
+.cs-about-card .card-body .card-title .plus-sign{
+  color: var(--light-green-color);
+}
+.cs-about-card .card-body .card-text{
+ color: var(--manatee-color);
+ font-size: 19px;
+ line-height: 32px;
+ font-weight: 500; 
+}
+.cs-video-card {
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+}
+.cs-video-card .cs-card-content h2{
+  font-size: 3rem;
+  line-height: 4.2rem;
+  font-weight: 600;
+  letter-spacing: 4.32px;
+  color: var(--white-color);
+  font-style: normal;
+  text-align: center;
+}
+
+/**** IPAD PRO Media Query ****/
+@media only screen and (max-width: 1366px) {
+  .cs-title-area .cs-sec-title{
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .cs-about-card .card-body .card-title{
+    font-size: 2.5rem;
+  }
+  .cs-btn-group .cs-btn-play{
+    right: -30px;
+    height: 140px;
+    width: 140px;
+  }
+}
+/**** IPAD Media Query ****/
+@media only screen and (max-width: 991px) {
+  .cs-about-card{
+    margin-bottom: 1.5rem;
+  }
+  .h-md-250{
+    height: 250px;
+  }
+  .cs-btn-group .cs-btn-play {
+    right: -18px;
+    bottom: -10px;
+    height: 130px;
+    width: 130px;
+    font-size: 36px;
+  }
+}
+/**** IPAD Media Query ****/
+@media only screen and (max-width: 600px) {
+ .cs-video-card .cs-card-content h2 {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  letter-spacing: 3.32px;
+}
+.cs-btn-group .cs-btn-play {
+  right: -8px;
+  bottom: -12px;
+  height: 100px;
+  width: 100px;
+  font-size: 28px;
+}
+}
+/*------------------- 4.8. Creative Services Section  -------------------*/
+.cs-services-wrapper{
+  padding: 10px 20px;
+  background-color: var(--white-smoke-color);
+}
+.cs-services-wrapper .bg-cover{
+  background-color: var(--dark-color);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.cs-services-wrapper .cs-title-area .cs-sec-title {
+  text-align: center;
+  color: var(--white-color);
+}
+.cs-service-tabs{
+  border: none;
+  justify-content: center;
+  margin: 40px 0px;
+}
+.cs-service-tabs .nav-item .nav-link{
+  border-radius: 50px;
+  margin-right: 15px;
+  padding: 13px 16px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  color: var(--white-color);
+  border: 1px solid var(--white-color);
+  background-color: transparent;
+}
+.cs-service-tabs .nav-item:last-child  .nav-link{
+  margin-right: 0px;
+}
+.cs-service-tabs .nav-item .nav-link:hover,
+.cs-service-tabs .nav-item .nav-link:focus,
+.cs-service-tabs .nav-item .nav-link.active{
+  background-color: var(--bright-green-color);
+  color: var(--base-color);
+  border-color: var(--base-color);
+}
+.cs-service-cta{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cs-service-cta img{
+  width: 100%;
+}
+.cs-service-cta .cs-btn-round{
+  position: absolute;
+  width: 163px;
+  height: 163px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--base-color);
+  background: rgb(245, 229, 200);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  font-style: normal;
+  letter-spacing: -0.48px;
+}
+.cs-service-slider{
+  overflow: hidden;
+}
+.cs-services-card {
+  border: 10px solid var(--dark-gray);
+  background-color: transparent;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.cs-services-card .card-img-overlay{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: #02040740;
+} 
+.cs-services-card .card-img-overlay .card-text{
+  display: inline-flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.cs-services-card .card-img-overlay .card-text small{
+  font-size: 17px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.48px;
+  color: var(--white-color);
+}
+.cs-services-card .card-img-overlay .card-text .cs-divider{
+  display: inline-block;
+  width: 54px;
+  height: 1px;
+  background-color: var(--white-color);
+}
+.cs-services-card .card-img-overlay .card-title{
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 34px;
+  color: var(--white-color);
+}
+/**** IPAD PRO Media Query ****/
+@media only screen and (max-width: 1366px) {
+  .cs-services-wrapper{
+    padding: 10px 12px !important;
+  }
+  .cs-services-wrapper .bg-cover{
+    padding: 48px 30px !important;
+  }
+  .cs-services-card .card-img-overlay .card-title{
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+/**** IPAD PRO Media Query ****/
+@media only screen and (max-width: 991px) {
+  .cs-service-cta{
+    display: none;
+  }
+}
+/**** IPAD Media Query ****/
+@media only screen and (max-width: 981px) {
+  .cs-services-wrapper .bg-cover{
+    padding: 48px 15px !important;
+  }
+  .cs-service-cta{
+    margin-bottom: 1.5rem;
+  }
+}
+/**** IPHONE Media Query ****/
+@media only screen and (max-width: 600px) {
+  .cs-services-wrapper .bg-cover{
+    padding: 48px 15px !important;
+  }
+  .cs-services-wrapper .cs-title-area .cs-sec-title{
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+  .cs-service-tabs{
+    flex-direction: column;
+    row-gap: 15px;
+    padding: 0px 15px;
+    margin: 25px 0px;
+  }
+  .cs-service-tabs .nav-item .nav-link{
+    width: 100%;
+  }
+}
+/*------------------- 4.9. Creative Testimonial Section  -------------------*/
+.cs-testimonial{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: var(--white-smoke-color);
+}
+.cs-testimonial-slider{
+  overflow: hidden;
+}
+.cs-testimonial-content h3{
+  font-size: 2.25rem;
+  line-height: 3.625rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.48px;
+  margin-bottom: 45px;
+  color: var(--base-color);
+}
+.cs-user-detail h5{
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: 0px;
+  color: var(--base-color);
+}
+.cs-user-detail p{
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--manatee-color);
+  margin-bottom: 0;
+}
+.cs-testimonial-nav {
+  position: absolute;
+  z-index: 2;
+  bottom: 5px;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 40px;
+}
+.cs-testimonial-nav .cs-nav-btn{
+  position: relative;
+  background-color: transparent;
+  border: 1px solid var(--white-color);
+  border-radius: 70px;
+  padding: 16px 32px;
+  font-size: 24px;
+  line-height: normal;
+}
+.cs-testimonial-nav .cs-nav-btn:hover,
+.cs-testimonial-nav .cs-nav-btn:active,
+.cs-testimonial-nav .cs-nav-btn:focus{
+  background-color: var(--base-color);
+  color: var(--white-color);
+}
+.cs-testimonial-nav .swiper-button-next:after, 
+.cs-testimonial-nav  .swiper-button-prev:after{
+  display: none;
+}
+.cs-testimonial-nav .swiper-pagination-fraction{
+  position: relative;
+  top: 0;
+  bottom: 0;
+}
+.cs-testimonial-nav .swiper-pagination-fraction span{
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 36px;
+  color: var(--white-color);
+  opacity: 0.4;
+}
+.cs-testimonial-nav .swiper-pagination-fraction span.swiper-pagination-current{
+  text-decoration: underline;
+  opacity: 1;
+}
+/**** IPAD PRO Media Query ****/
+@media only screen and (max-width: 981px) {
+  .cs-testimonial-content h3{
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+/**** IPHONE Media Query ****/
+@media only screen and (max-width: 600px) {
+  .cs-testimonial-slider{
+    overflow: visible !important;
+    height: 100%;
+    margin-bottom: -20px;
+  }
+  .cs-testimonial-content{
+    padding: 0px 15px;
+  }
+  .cs-testimonial-content h3 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  .cs-testimonial-nav{
+    width: 100%;
+    padding: 0px 15px;
+    position: relative;
+    margin-top: 30px;
+    bottom: 0px;
+    column-gap: 20px;
+  }
+}
+/*------------------- 4.11. Creative FAQs Section  -------------------*/
+.cs-faqs-wrapper {
+  padding: 10px 20px;
+  background-color: var(--white-smoke-color);
+}
+.cs-faqs-wrapper .cs-faqs-inner{
+  background: var(--white-color);
+  border-radius: 28px;
+  padding: 60px 48px;
+}
+.cs-accordion-wrap .accordion-item{
+  border-radius: 0px;
+  border: none;
+  border-top: 1px solid var(--dark-color);
+}
+.cs-accordion-wrap .accordion-item .accordion-header .accordion-button{
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 35px;
+  column-gap: 30px;
+  color: var(--base-color);
+  background-color: transparent;
+  box-shadow: none;
+}
+.cs-accordion-wrap .accordion-item .accordion-body{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  font-style: normal;
+  color: var(--manatee-color);
+}
+/**** IPAD PRO Media Query ****/
+@media only screen and (max-width: 1366px) {
+  .cs-faqs-wrapper {
+    padding: 10px 12px !important;
+  }
+  .cs-faqs-wrapper .cs-faqs-inner {
+    padding: 60px 30px !important;
+  }
+  .cs-accordion-wrap .accordion-item .accordion-header .accordion-button{
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+/**** IPAD Media Query ****/
+@media only screen and (max-width: 981px) {
+  .cs-faqs-wrapper .cs-faqs-inner {
+    padding: 60px 15px !important;
+  }
+  .cs-accordion-wrap{
+    margin-top: 2rem;
+  }
+}
+/**** IPHONE Media Query ****/
+@media only screen and (max-width: 600px) {
+  .cs-accordion-wrap .accordion-item .accordion-header .accordion-button{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .cs-accordion-wrap .accordion-item .accordion-body{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+/*------------------- 4.11. Creative Blog Section  -------------------*/
+.cs-blog-wrapper{
+ background-color: black; 
+}
+.cs-blog-wrapper .cs-blog-card{
+  background-color: #e4d7b2;
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.cs-blog-card .card-header{
+  border: none;
+  border-radius: 0px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+}
+.cs-blog-card .card-header span{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: var(--base-color);
+  border-radius: 50%;
+}
+.row > .col-lg-4:nth-child(1) .card.cs-blog-card .card-header span {
+  background: var(--blue);
+}
+.row > .col-lg-4:nth-child(2) .card.cs-blog-card .card-header span {
+  background: var(--orange);
+}
+.row > .col-lg-4:nth-child(3) .card.cs-blog-card .card-header span {
+  background: var(--purple);
+}
+.row > .col-lg-4:nth-child(4) .card.cs-blog-card .card-header span {
+  background: var(--blue);
+}
+.row > .col-lg-4:nth-child(5) .card.cs-blog-card .card-header span {
+  background: var(--orange);
+}
+.row > .col-lg-4:nth-child(6) .card.cs-blog-card .card-header span {
+  background: var(--purple);
+}
+.cs-blog-card .card-header small{
+  font-size: 14px;
+  line-height: 22px;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--manatee-color) !important;
+}
+.cs-blog-card .card-body{
+  padding: 10px 0px 30px;
+}
+.cs-blog-card .card-body .card-title{
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 39px;
+  font-style: normal;
+  margin-bottom: 0px;
+  color: var(--base-color);
+} 
+.cs-blog-card .card-footer{
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+.cs-blog-card .card-text{
+  font-size: 14px;
+  line-height: 22px;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: black;
+}
+.cs-blog-card .cs-btn-more{
+  position: relative;
+  background-color: transparent;
+  border: 1px solid var(--base-color);
+  border-radius: 70px;
+  padding: 16px 32px;
+  font-size: 24px;
+  line-height: normal;
+}
+.cs-blog-card:hover .cs-btn-more,
+.cs-blog-card:active .cs-btn-more,
+.cs-blog-card:focus .cs-btn-more{
+  background-color: var(--base-color);
+  color: var(--white-color);
+}
+/*------------------- 4.11. Creative Call To Action Section  -------------------*/
+.cs-cta-wrapper{
+ background-color: var(--white-smoke-color);
+ padding: 10px 20px;
+}
+.cs-cta-wrapper .cs-cta-inner{
+  border-radius: 28px;
+  padding: 60px 48px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.cs-cta-inner .cs-cta-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cs-cta-content .cta-heading h2{
+  font-size: 5rem;
+  line-height: 6.5rem;
+  font-weight: 700;
+  color: var(--white-color);
+  font-style: normal;
+  letter-spacing: -0.48px;
+  margin-bottom: 0px;
+}
+.cs-cta-content .cs-btn-group .cs-btn-fill{
+  background-color: var(--white-color);
+  color: var(--base-color);
+}
+.cs-cta-content .cs-btn-group .cs-btn-fill:hover, 
+.cs-cta-content .cs-btn-group .cs-btn-fill:active, 
+.cs-cta-content .cs-btn-group .cs-btn-fill:focus{
+  background-color: var(--bright-green-color);
+  border-color: var(--bright-green-color);
+  color: var(--base-color);
+}
+/**** IPAD Pro Media Query ****/
+@media only screen and (max-width: 1366px) {
+  .cs-cta-wrapper {
+    padding: 10px 12px !important;
+  }
+  .cs-cta-wrapper .cs-cta-inner {
+    padding: 60px 30px !important;
+  }
+  .cs-cta-content .cta-heading h2{
+    font-size: 3.5rem;
+    line-height: 5rem;
+  }
+}
+/**** IPAD Media Query ****/
+@media only screen and (max-width: 981px) {
+  .cs-cta-wrapper .cs-cta-inner {
+    padding: 60px 15px !important;
+  }
+  .cs-cta-inner .cs-cta-content{
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+/**** IPHONE Media Query ****/
+@media only screen and (max-width: 600px) {
+  .cs-cta-content .cta-heading h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-align: center;
+  }
+}
+/*------------------- 4.11. Creative Footer  -------------------*/
+.cs-site-footer{
+ background-color: var(--white-smoke-color);
+}
+.cs-footer-logo img{
+  margin-bottom: 30px;
+}
+.cs-site-footer .cs-site-desc{
+  color: var(--medium-gray-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+.cs-footer-social{
+  display: inline-flex;
+  column-gap: 10px;
+}
+.cs-footer-social a{
+  width: 34px;
+  height: 34px;
+  background: var(--white-color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  font-size: 14px;
+  color: var(--base-color);
+}
+.cs-footer-social a:hover,
+.cs-footer-social a:active,
+.cs-footer-social a:focus{
+  background: var(--base-color);
+  color: var(--white-color);
+}
+.cs-footer-widget h5{
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: var(--base-color);
+}
+.cs-footer-widget .nav-link{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  padding: 0px;
+  color: var(--manatee-color);
+  margin-bottom: 20px; 
+  display: inline-block;
+}
+.cs-footer-widget .nav-link:hover,
+.cs-footer-widget .nav-link:active,
+.cs-footer-widget .nav-link:focus{
+  color: var(--base-color);
+}
+.cs-footer-widget .nav-link i{
+  margin-right: 5px;
+  color: var(--base-color);
+}
+.cs-footer-contact .nav-link{
+  display: inline-flex;
+  align-items: center;
+}
+/**** IPAD Media Query ****/
+@media only screen and (max-width: 981px) {
+  .cs-footer-widget{
+    margin-bottom: 25px;
+  }
+}
+/*------------------- 4.11. Creative Back Top Back Button  -------------------*/
+.cs-scroll-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  display: block;
+  border-radius: 50px;
+  z-index: 10000;
+  opacity: 1;
+  visibility: hidden;
+  transform: translateY(45px);
+  transition: all 300ms linear;
+}
+.cs-scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.cs-scroll-top svg {
+  color: var(--base-color);
+  border-radius: 50%;
+  background: transparent;
+}
+.cs-scroll-top:after {
+  content: "\f062";
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 700;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  color: var(--base-color);
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  display: block;
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.04);
+}
+.cs-scroll-top .progress-circle path {
+  stroke: var(--base-color);
+  stroke-width: 4px;
+  box-sizing: border-box;
+  transition: all 400ms linear;
+}
+.cs-scroll-top svg path {
+  fill: none;
+}
