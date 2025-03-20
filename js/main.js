@@ -203,6 +203,8 @@ let width = screen.width;
 if(width<992){
   document.getElementById('coordinator').classList.remove("pb-3");
   document.getElementById('oc-team').classList.remove("pt-3");
+  document.getElementById('prize-hero').classList.remove("pb-3");
+  document.getElementById('prize-ladder').classList.remove("pt-3");
 }
 
 let clickTimes = [];

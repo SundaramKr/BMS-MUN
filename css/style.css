@@ -179,11 +179,11 @@ ins {
   column-gap: 10px;
 }
 .cs-btn-group .cs-btn-outline{
-  padding: 13px 16px;
+  padding: 16px 16px;
   display: inline-block;
   background-color: transparent;
-  color: var(--base-color);
-  border: 1px solid var(--base-color);
+  color: #e4d7b2;
+  border: 1px solid #e4d7b2;
   border-radius: 50px;
   line-height: 22px;
   font-weight: bold;
@@ -196,6 +196,7 @@ ins {
 .cs-btn-group .cs-btn-outline:focus{
   background-color: var(--bright-green-color);
   border-color: var(--bright-green-color);
+  color: black;
 }
 .cs-btn-group .cs-round-btn{
   border: none;
@@ -226,7 +227,7 @@ ins {
   letter-spacing: -.32px;
 }
 .cs-btn-group .cs-btn-fill i{
-  margin-left: 30px;
+  margin-left: 15px;
 }
 .cs-btn-group .cs-btn-fill:hover,
 .cs-btn-group .cs-btn-fill:active,
@@ -239,8 +240,8 @@ ins {
   padding: 0px;
   display: inline-block;
   background-color: transparent;
-  color: var(--base-color);
-  border-bottom: 1px solid var(--base-color);
+  color: var(--white-color);
+  border-bottom: 1px solid var(--white-color);
   line-height: 20px;
   font-weight: bold;
   font-size: 16px;
@@ -266,6 +267,11 @@ ins {
   display: inline-block;
   padding: 0;
   font-size: 44px;
+}
+@media only screen and (max-width: 393px) {
+  .cs-btn-group .cs-btn-fill{
+    padding: 16px 30px;
+  }
 }
 /*------------------- 4.3. Creative Titles  -------------------*/
 .cs-title-area .cs-sec-title{
@@ -338,13 +344,12 @@ ins {
   column-gap: 30px;
   margin-bottom: 32px;
 }
-/**** IPAD Media Query ****/
-@media only screen and (max-width: 991px) {
-  .cs-header {
-    padding-bottom: 10px;
+
+@media only screen and (max-width: 393px) {
+  .cs-hero-content .cs-btn-group{
+    column-gap: 20px;
   }
 }
-
 /**** Mobile Header ****/
 .cs-navbar-right {
   gap: 15px;
@@ -436,8 +441,12 @@ ins {
   font-size: 20px;
 }
 /*------------------- 4.6. Creative Hero Section  -------------------*/
+.cs-hero-wrapper{
+  background-color: black;
+}
+
 .cs-hero-content .cs-hero-title{
-  color: var(--base-color);
+  color: white;
   font-size: 4.5rem;
   line-height: 5.8rem;
   font-weight: 600;
@@ -446,7 +455,7 @@ ins {
   margin-bottom: 32px;
 }
 .cs-hero-content .cs-hero-desc{
-  color: var(--manatee-color);
+  color: white;
   font-size: 16px;
   font-weight: 500;
   line-height: 28px;
@@ -463,6 +472,9 @@ ins {
   letter-spacing: 0;
   margin-bottom: 0px;
 }
+.cs-hero-card{
+  background-color: transparent;
+}
 .cs-hero-card .card-body{
   background-color: var(--light-gray);
   border-radius: 20px;
@@ -478,11 +490,12 @@ ins {
   margin-bottom: 30px;
 }
 .cs-hero-card .card-body .card-text{
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
   line-height: 24px;
   font-style: normal;
   color: var(--dark-gray-color);
+  padding-bottom: 20px;
 }
 .cs-hero-card .progress{
   background-color: var(--silver-gray);
@@ -550,7 +563,9 @@ ins {
     margin-bottom: 15px;
   }
   .cs-hero-card .card-body .card-text{
+    font-size: 1.4rem;
     margin-bottom: 35px;
+    padding-bottom: 0px;
   }
   .cs-card-ful .cs-card-content {
     max-width: 70%;
@@ -579,17 +594,8 @@ ins {
     flex-direction: column;
     align-items: start;
   }
-
-  .cs-btn-group{
-    align-items: start;
-  }
-
   .cs-btn-underline{
     margin-top: 15px;
-  }
-
-  .cs-hero-content .cs-btn-group a:first-child{
-    margin-bottom: 15px;
   }
   .cs-hero-clients {
     column-gap: .5rem;
@@ -662,7 +668,22 @@ ins {
   font-style: normal;
   text-align: center;
 }
-
+.cs-about-card .card-body .cs-prize .card-title{
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--white-color);
+  letter-spacing: -0.48px;
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 1399px) {
+  .cs-about-card .card-body .cs-prize .card-title{
+    font-size: 1.5rem;
+  }
+  .cs-about-card .card-body .card-title{
+    font-size: 2.5rem;
+  }
+}
 /**** IPAD PRO Media Query ****/
 @media only screen and (max-width: 1366px) {
   .cs-title-area .cs-sec-title{
@@ -680,6 +701,9 @@ ins {
 }
 /**** IPAD Media Query ****/
 @media only screen and (max-width: 991px) {
+  .cs-about-card .card-body .cs-prize .card-title{
+    font-size: 2.3rem;
+  }
   .cs-about-card{
     margin-bottom: 1.5rem;
   }
@@ -1014,7 +1038,7 @@ ins {
     padding: 10px 12px !important;
   }
   .cs-faqs-wrapper .cs-faqs-inner {
-    padding: 60px 30px !important;
+    padding: 30px 30px !important;
   }
   .cs-accordion-wrap .accordion-item .accordion-header .accordion-button{
     font-size: 20px;
@@ -1024,7 +1048,7 @@ ins {
 /**** IPAD Media Query ****/
 @media only screen and (max-width: 981px) {
   .cs-faqs-wrapper .cs-faqs-inner {
-    padding: 60px 15px !important;
+    padding: 20px 15px !important;
   }
   .cs-accordion-wrap{
     margin-top: 2rem;
